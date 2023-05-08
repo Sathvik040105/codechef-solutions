@@ -1,0 +1,9 @@
+tc = int(input())
+for _ in range(tc):
+    N = int(input())
+    B = list(map(int,input().split(' ')))
+    x = B.count(1)
+    if x%2 == 0:
+        print('yes')
+    else:
+        print('no')
