@@ -1,0 +1,8 @@
+import math
+tc = int(input())
+for _ in range(tc):
+    x,y,k = list(map(int,input().split(" ")))
+    if k > abs(x-y) and abs(x-y)!= 0:
+        print(1)
+    else:
+        print(math.ceil(abs(x-y)/k))
