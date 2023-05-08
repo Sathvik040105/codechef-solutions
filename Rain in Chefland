@@ -1,0 +1,9 @@
+T =int(input())
+for _ in range(T):
+    x = int(input())
+    if x < 3:
+        print('LIGHT')
+    elif 3<= x <7:
+        print('MODERATE')
+    else:
+        print('HEAVY')
