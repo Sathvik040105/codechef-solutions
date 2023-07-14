@@ -1,0 +1,24 @@
+ Find if there exists a subset of A such that sum of pairwise product is B.
+
+ def subset_pairwise_product(A, B):
+    def backtrack(index, current_sum):
+        if current_sum == B:
+            return True
+        if current_sum > B or index == len(A):
+            return False
+        
+        for i in range(index, len(A)):
+            if backtrack(i + 1, current_sum + A[i]):
+                return True
+        return False
+    
+    return backtrack(0, 0)
+
+# Example usage
+A = [1, 2, 3, 4, 5]
+B = 19
+
+if subset_pairwise_product(A, B):
+    print("There exists a subset of A such that the sum of pairwise products is", B)
+else:
+    print("No subset of A exists such that the sum of pairwise products is", B)
